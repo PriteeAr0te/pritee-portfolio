@@ -1,7 +1,6 @@
-// layout.js
-import { Header } from "@/components/layout/Header"
-import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider";
+import "./globals.css";
+import AppLayout from "@/components/layout/AppLayout";
 
 export const metadata = {
   title: "Pritee Arote | React & MERN Stack Developer Portfolio",
@@ -30,17 +29,16 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-}
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <Header />
-          <main className="pt-[60px]">{children}</main>
+          <AppLayout children={children}/>
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
