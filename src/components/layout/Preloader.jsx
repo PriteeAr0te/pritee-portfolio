@@ -1,32 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
 
 const Preloader = ({ onComplete }) => {
-  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    let current = 0;
 
-    const updateCounter = () => {
-      current += Math.floor(Math.random() * 10) + 1;
-      if (current >= 100) {
-        current = 100;
-        setCounter(current);
-        animateExit();
-      } else {
-        setCounter(current);
-        const delay = Math.floor(Math.random() * 200) + 50;
-        setTimeout(updateCounter, delay);
-      }
+    const splitAnimation = () => {
+      gsap.to(".h1", {
+        duration: 1.5,
+        opacity: 1,
+        y: 0,
+        stagger: { amount: 0.5 },
+        ease: "power4.inOut",
+        onComplete: animateExit,
+      });
     };
 
     const animateExit = () => {
-      gsap.to(".counter", {
-        delay: 0.5,
+      gsap.to(".preloader-container", {
+        delay: 0,
         opacity: 0,
-        duration: 0.25,
+        duration: 2,
       });
 
       gsap.to(".bar", {
@@ -41,14 +37,22 @@ const Preloader = ({ onComplete }) => {
       });
     };
 
-    updateCounter();
+    splitAnimation();
   }, [onComplete]);
 
   return (
     <div className="">
-      <h1 className="counter bg-black">
-        {counter}
-      </h1>
+
+      <div className="preloader-container">
+        <p className="text-white px-2 flex justify-center font-semibold whitespace-normal text-2xl mt-[300px] md:mt-32 text-center tracking-wide flex-wrap">Code is my canvas, UI is my signature — </p>
+        <div className="flex justify-center items-center">
+          {"PRITEE".split("").map((char, i) => (
+            <h1 key={i} className="h1 text-[80px] xl:text-[150px] opacity-0 translate-y-[700px]">
+              {char}
+            </h1>
+          ))}
+        </div>
+      </div>
 
       <div className="overlay">
         {Array.from({ length: 10 }).map((_, i) => (

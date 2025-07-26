@@ -46,12 +46,13 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
+  --header: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --primary: oklch(50.8% 0.118 165.612);
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
@@ -79,13 +80,14 @@
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: #111827;
+  --header: #151D2C;
   --foreground: oklch(0.984 0.003 247.858);
   --card: oklch(0.208 0.042 265.755);
   --card-foreground: oklch(0.984 0.003 247.858);
   --popover: oklch(0.208 0.042 265.755);
   --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.929 0.013 255.508);
+  --primary: oklch(76.5% 0.177 163.223);
   --primary-foreground: oklch(0.208 0.042 265.755);
   --secondary: oklch(0.279 0.041 260.031);
   --secondary-foreground: oklch(0.984 0.003 247.858);
@@ -116,6 +118,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -125,7 +128,7 @@
   position: relative;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20vw;
-  color:beige;
+  color: black;
   line-height: 1.025;
 }
 
@@ -133,28 +136,165 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 20;
   display: flex;
 }
 
 .bar {
   width: 10vw;
   height: 105vh;
-  background: white;
+  background: black;
   display: block;
 }
 
-.counter {
+/* Preloader Animation */
+.preloader-container {
   position: fixed;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
   z-index: 10000;
-  color: beige;
-  padding: 1 2em 0 0.4em;
-  font-size: 20vw;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
 
+.preloader-container h1 {
+  opacity: 0;
+  font-family: "Work Sans", sans-serif;
+  background-color: #10b981;
+  background: linear-gradient(to right, #3b82f6, #34d399);
+  font-weight: 600;
+  letter-spacing: 10px;
+  margin-top: 10px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+}
+
+.container {
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+
+@keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.container:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.left-container {
+  left: 0;
+}
+
+.right-container {
+  left: 50%;
+}
+
+.left-container .img {
+  right: -60px;
+}
+.right-container .img {
+  left: -60px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: moveline 4.5s linear forwards;
+}
+
+@keyframes moveline {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+.left-arrow-container {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 32px;
+  z-index: 1;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-left: 15px solid white;
+  right: -15px;
+}
+
+.right-arrow-container {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 32px;
+  z-index: 1;
+  border-bottom: 15px solid transparent;
+  border-top: 15px solid transparent;
+  border-right: 15px solid white;
+  left: -15px;
+}
+
+@media screen and (max-width: 600px) {
+  .timeline {
+    margin: 50px auto;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 38px 50pcx;
+    padding-right: 25px;
+    margin-left: 10px;
+  }
+
+  .right-container {
+    left: 0;
+  } 
+
+  .left-container .img, .right-container .img {
+    left: -63px;
+
+  }
+
+  .left-arrow-container, .right-arrow-container {
+    border-right: 15px solid white;
+    border-left: 0px;
+    left: -15px;
+  }
 }

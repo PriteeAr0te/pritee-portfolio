@@ -19,8 +19,8 @@ export function Header() {
   const { setTheme, theme } = useTheme()
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-background shadow-md">
-      <nav className="container mx-auto flex items-center justify-between px-4 py-3">
+    <header className="fixed top-0 left-0 w-full z-50 dark:bg-gray-800/30 backdrop-blur-md border-b border-gray-700/30 shadow-md h-[60px]">
+      <nav className="mx-auto flex items-center h-fit justify-between px-4 py-3">
         <h1 className="text-xl font-bold tracking-wide text-primary">Pritee.dev</h1>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -28,7 +28,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
+              className="hover:text-primary font-medium dark:font-normal transition-colors"
             >
               {item.label}
             </Link>
