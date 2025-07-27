@@ -1,17 +1,20 @@
 "use client";
 
+import AboutSection from "@/components/ui/AboutSection";
+import HeroComponent from "@/components/ui/HeroComponent";
+import ProjectsSection from "@/components/ui/ProjectsSection";
+import SkillsSection from "@/components/ui/SkillsSection";
 import Timeline from "@/components/ui/Timeline";
 
 export default function Home() {
 
   return (
     <section className="w-full flex flex-col items-center justify-center text-center">
-
-      <p className="mt-10 text-lg border border-white rounded-xl py-4 px-6 max-w-xl">
-        This is the dummy home page.
-      </p>
-
-      <Timeline/>
+      <HeroComponent />
+      <AboutSection />
+      <ProjectsSection />
+      <Timeline />
+      <SkillsSection/>
     </section>
   );
 }

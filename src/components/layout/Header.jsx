@@ -28,7 +28,7 @@ export function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className="hover:text-primary font-medium dark:font-normal transition-colors"
+              className="hover:text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 font-medium dark:font-normal transition-colors"
             >
               {item.label}
             </Link>
