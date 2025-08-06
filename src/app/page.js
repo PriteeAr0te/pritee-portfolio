@@ -9,7 +9,7 @@ import Timeline from "@/components/ui/Timeline";
 export default function Home() {
 
   return (
-    <section className="w-full flex flex-col items-center justify-center text-center">
+    <section className="w-screen flex flex-col items-center justify-center text-center">
       <HeroComponent />
       <AboutSection />
       <ProjectsSection />

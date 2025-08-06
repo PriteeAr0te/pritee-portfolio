@@ -5,10 +5,10 @@ import DI from '../../../public/img/dreams.png';
 
 const Timeline = () => {
     return (
-        <section id='work' className='py-20 relative'>
+        <section id='work' className='py-20 overflow-x-hidden w-screen relative'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
-            <div className='absolute -left-20 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
-            <div className='absolute -right-20 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
+            <div className='absolute -left-0 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
+            <div className='absolute -right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='text-center mb-12'>
                     <h2 id='about-title' className='text-3xl md:text-4xl font-bold text-white'>Professional <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Experience</span></h2>

@@ -130,6 +130,13 @@
   }
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
 .header .h1 {
   position: relative;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -356,3 +363,13 @@
 
   }
 } */
+
+  .cardContainer {
+    position: sticky !important;
+    top: 120px !important;
+  }
+
+  .stack-card {
+    position: relative;
+    top: 0%;
+  }

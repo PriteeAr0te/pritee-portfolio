@@ -2,16 +2,16 @@ import React from 'react'
 
 const AboutSection = () => {
     return (
-        <section id='about' className='py-20 relative'>
+        <section id='about' className='py-20  w-screen overflow-x-hidden relative'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
-            <div className='absolute -left-20 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
-            <div className='absolute -right-20 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
-            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='absolute left-0 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
+            <div className='absolute right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
+            <div className='max-w-7xl mx-auto'>
                 <div className='text-center mb-12'>
                     <h2 id='about-title' className='text-3xl md:text-4xl font-bold text-white'>About <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Me</span></h2>
                     <div className='mt-4 h-1 w-28 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full'></div>
                 </div>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch'>
                     <div className='h-full'>
                         <div className='bg-gray-800/40 backdrop-blur-sm rounded-2xl p-3 sm:p-6 border border-gray-700/50 hover:border-emerald-500/30 transition-all duration-300 shadow-xl h-full relative overflow-hidden'>
                             <h3 className='text-2xl font-semibold text-white mb-6 relative text-left'>My Journey</h3>

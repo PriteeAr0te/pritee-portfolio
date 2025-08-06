@@ -3,10 +3,10 @@ import React from 'react'
 
 const ProjectsSection = () => {
     return (
-        <section id='projects' className='py-20 relative text-left'>
+        <section id='projects' className='py-20 overflow-x-hidden w-screen relative text-left'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
-            <div className='absolute -right-20 top-1/3 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl'></div>
-            <div className='absolute -left-20 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
+            <div className='absolute -right-0 top-1/3 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl'></div>
+            <div className='absolute -left-0 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className="text-center mb-16">

@@ -20,7 +20,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 dark:bg-gray-800/30 backdrop-blur-md border-b border-gray-700/30 shadow-md h-[60px]">
-      <nav className="mx-auto flex items-center h-fit justify-between px-4 py-3">
+      <nav className="mx-auto overflow-x-hidden flex items-center h-fit justify-between px-4 py-3">
         <h1 className="text-xl font-bold tracking-wide text-primary">Pritee.dev</h1>
 
         <div className="hidden md:flex items-center space-x-6">

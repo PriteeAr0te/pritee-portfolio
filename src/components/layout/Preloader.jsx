@@ -41,7 +41,7 @@ const Preloader = ({ onComplete }) => {
   }, [onComplete]);
 
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
 
       <div className="preloader-container">
         <p className="text-white px-2 flex justify-center font-semibold whitespace-normal text-2xl mt-[300px] md:mt-32 text-center tracking-wide flex-wrap">Code is my canvas, UI is my signature — </p>
