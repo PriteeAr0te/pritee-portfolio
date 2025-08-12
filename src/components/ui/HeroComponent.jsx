@@ -8,7 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 const HeroComponent = () => {
     return (
-        <section id="home" className='w-screen overflow-x-hidden flex items-center relative pt-20 md:pt-20 lg:pt-16 pb-16 md:pb-12'>
+        <section id="home" className='w-full overflow-x-hidden flex items-center relative pt-20 md:pt-20 lg:pt-16 pb-16 md:pb-12'>
             <div className='absolute inset-0'>
                 <div className="absolute inset-0 bg-gradient-to-b from-gray-100 dark:from-gray-900 via-gray-100 dark:via-gray-900 to-white dark:to-gray-800"></div>
                 <div className='absolute inset-0 opacity-20'
@@ -84,7 +84,7 @@ const HeroComponent = () => {
                         </div>
                     </div>
 
-                    <div className='lg:col-span-5 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[400px] relative mt-2 sm:mt-0 mb-16 sm:mb-16'>
+                    <div className='lg:col-span-5 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[400px] relative mt-2 sm:mt-0 mb-16 sm:mb-12'>
                         <div className='w-full h-full flex items-center justify-center'>
                             <Image src={Me} alt="Its Me - Pritee" height={400} width={400} />
                         </div>

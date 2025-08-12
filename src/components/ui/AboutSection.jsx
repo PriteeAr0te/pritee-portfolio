@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutSection = () => {
     return (
-        <section id='about' className='py-20  w-screen overflow-x-hidden relative'>
+        <section id='about' className='py-20 overflow-x-hidden relative'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
             <div className='absolute left-0 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
             <div className='absolute right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
