@@ -5,7 +5,7 @@ const ContactSection
     = () => {
         const { theme } = useTheme()
         return (
-            <section className='py-20 overflow-x-hidden relative text-center'>
+            <section className='py-16 overflow-x-hidden relative text-center' id='contact'>
                 <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
                 <div className='absolute -right-0 top-1/3 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl'></div>
                 <div className='absolute -left-0 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -14,7 +14,8 @@ const ContactSection
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">With Me</span></h2>
                         <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
-                        <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">Feel free to connect with me on these platforms to discuss tech, share ideas, or just say hello!</p>
+                        <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">I’m exploring opportunities to bring my skills, creativity, and passion for clean, impactful code to life.
+                            Whether it’s collaborating on ambitious projects, solving real-world problems, or exchanging ideas — let’s connect and make it happen. Drop me a message, and let’s turn possibilities into reality.</p>
                     </div>
 
                     <div className="max-w-3xl mx-auto" style={{ opacity: 1 }}>
@@ -260,6 +261,13 @@ const ContactSection
                                 </a>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="mt-16 text-center max-w-3xl xl:max-w-2xl mx-auto">
+                        <p className="text-xl md:text-2xl xl:text-4xl font-semibold text-gray-900 dark:text-gray-200 italic">
+                            "I design with intent, code with precision, and build to make an impact."
+                        </p>
+                        <p className="mt-4 text-3xl font-bold text-emerald-500 dancing-script">— Pritee</p>
                     </div>
 
                 </div>

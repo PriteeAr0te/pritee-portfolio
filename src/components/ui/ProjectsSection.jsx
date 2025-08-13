@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard'
 
 const ProjectsSection = () => {
     return (
-        <section id='projects' className='py-20 overflow-x-hidden relative text-left'>
+        <section id='projects' className='py-16 overflow-x-hidden relative text-left'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
             <div className='absolute -right-0 top-1/3 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl'></div>
             <div className='absolute -left-0 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -15,7 +15,8 @@ const ProjectsSection = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Projects</span></h2>
 
                     <div className="mt-4 h-1 w-40 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
-                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">Here's a selection of projects that showcase my skills and passion for building exceptional digital experiences across different platforms.</p>
+                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">A curated collection of my most impactful work — from responsive, user-focused frontends to scalable full-stack applications.
+                        Each project reflects my commitment to clean code, modern tech stacks, and real-world problem solving.</p>
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>

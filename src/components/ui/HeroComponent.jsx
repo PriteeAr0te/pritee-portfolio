@@ -3,7 +3,7 @@ import React from 'react'
 import Me from '../../../public/img/its-me.png'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter  } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -31,7 +31,7 @@ const HeroComponent = () => {
                     }}
                 ></div>
             </div>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 flex items-center h-full">
+            <div className="max-w-7xl mx-auto gap-y-4 px-4 sm:px-6 lg:px-8 w-full z-10 flex items-center h-full">
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 items-center w-full'>
                     <div className='lg:col-span-7 text-center lg:text-left'>
                         <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-20 xl:mr-22'>Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Pritee Arote </span></h1>
@@ -41,17 +41,17 @@ const HeroComponent = () => {
                                 <span className="font-semibold text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500 tracking-wider">
                                     <TypeAnimation
                                         sequence={[
-                                            "building full-stack apps",
+                                            "building performant full-stack apps",
                                             1200,
-                                            "designing scalable systems",
+                                            "designing scalable architectures",
                                             1200,
-                                            "crafting pixel-perfect UIs",
+                                            "crafting intuitive, pixel-perfect UIs",
                                             1200,
-                                            "writing type-safe code",
+                                            "writing clean, type-safe code",
                                             1200,
-                                            "creating smooth UX flows",
+                                            "creating frictionless user journeys",
                                             1200,
-                                            "solving real-world problems",
+                                            "solving business problems with tech",
                                             1200,
                                         ]}
                                         wrapper="span"
@@ -62,11 +62,11 @@ const HeroComponent = () => {
                                 </span>
                             </div>
                         </div>
-                        <p className='text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8'>I bring frontend finesse and backend brains together to build fast, scalable, and user-focused digital products. Whether it’s solving real-world problems, optimizing performance, or delivering pixel-perfect interfaces — I care about code that works and design that speaks.</p>
+                        <p className='text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8'>I bridge the gap between beautiful design and powerful engineering — building fast, scalable, and user-focused products. From architecting robust backends to delivering pixel-perfect frontends, I focus on code that works, designs that speak, and experiences users remember.</p>
 
-                        <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6'>
+                        <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center lg:items-start mb-6'>
                             <Link href="https://drive.google.com/file/d/17J1bN70D8girOW6wqLXEbTXp0o7t11_o/view?usp=sharing" target='_blank' className="group relative px-6 py-3 rounded-full font-medium items-center justify-center bg-gradient-to-r from-emerald-600 to-blue-600 text-white shadow-lg shadow-emerald-600/20 hover:shadow-emerald-600/40  inline-flex transition-transform duration-300">
-                                <span className='flex items-center'>My Resume</span>
+                                <span className='flex items-center'>View My Resume</span>
                                 <span className='ml-2'>
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path></svg></span>
                             </Link>

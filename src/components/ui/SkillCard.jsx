@@ -20,7 +20,7 @@ const SkillCard = ({ i, skills, category, progress, range, targetScale }) => {
 
             <motion.div
                 style={{scale, top: `calc(-1vh + ${i * 50}px)` }}
-                className="bg-emerald-50 dark:bg-gray-800 rounded-2xl p-6 py-3 border border-gray-700/50 hover:border-emerald-500/30 transition-all duration-300 shadow-lg max-h-[300px] min-h-[210px] stack-card"
+                className="bg-emerald-50 dark:bg-gray-800 mb-10 md:mb-0 rounded-2xl p-6 py-3 border border-gray-700/50 hover:border-emerald-500/30 transition-all duration-300 shadow-lg max-h-[480px] min-h-[210px] stack-card"
             >
                 <h3 className="text-xl font-semibold text-slate-800 dark:text-gray-200 mb-4 flex items-center gap-2 capitalize">
                     <span>{category}</span>

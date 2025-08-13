@@ -32,46 +32,47 @@ import Cursor from '../../../public/img/cursor.png'
 import NPM from '../../../public/img/npm.png'
 import AWS from '../../../public/img/aws.png'
 import Notion from '../../../public/img/notion.png'
+import Sanity from '../../../public/img/sanity.png'
+import NextAuth from '../../../public/img/next-auth.png'
 import SkillCard from './SkillCard'
 import Lenis from 'lenis'
 
 const skillsData = {
     frontend: [
-        { name: 'React', logo: ReactLogo },
+        { name: 'React (Hooks, Router, Redux)', logo: ReactLogo },
         { name: 'Next.js', logo: NextLogo },
-        { name: 'JavaScript', logo: Javascript },
         { name: 'TypeScript', logo: Typescript },
-        { name: 'React Router', logo: Router },
-        { name: 'Redux', logo: Redux },
+        { name: 'JavaScript (ES6+)', logo: Javascript },
         { name: 'Tailwind CSS', logo: Tailwind },
+        { name: 'Material-UI', logo: MUI },
+        { name: 'Framer Motion', logo: Framer },
         { name: 'HTML5', logo: HTML },
         { name: 'CSS3', logo: CSS },
         { name: 'Bootstrap', logo: Bootstarp },
-        { name: 'Material UI', logo: MUI },
-        { name: 'Framer Motion', logo: Framer },
+        { name: 'Sanity CMS', logo: Sanity },
     ],
     backend: [
         { name: 'Node.js', logo: Nodejs },
         { name: 'Express.js', logo: Expressjs },
-        { name: 'JWT', logo: JWT },
-        { name: 'Zod', logo: Zod },
+        { name: 'JWT Authentication', logo: JWT },
+        { name: 'Zod Validation', logo: Zod },
         { name: 'Cloudinary', logo: Cloudinary },
+        { name: 'NextAuth.js', logo: NextAuth },
     ],
     database: [
         { name: 'MongoDB', logo: Mongo },
-        { name: 'SQL', logo: SQL },
-        { name: 'Neo4J', logo: Neo },
+        { name: 'MySQL', logo: SQL },
+        { name: 'Neo4j', logo: Neo },
     ],
     tools: [
-        { name: 'Git', logo: Git },
-        { name: 'Github', logo: Github },
+        { name: 'Git & GitHub', logo: Git },
         { name: 'Postman', logo: Postman },
         { name: 'Vercel', logo: Vercel },
         { name: 'Netlify', logo: Netlify },
-        { name: 'VSCode', logo: Vscode },
-        { name: 'Cursor', logo: Cursor },
-        { name: 'NPM', logo: NPM },
         { name: 'AWS', logo: AWS },
+        { name: 'VS Code', logo: Vscode },
+        { name: 'Cursor', logo: Cursor },
+        { name: 'NPM & Yarn', logo: NPM },
         { name: 'Notion', logo: Notion },
     ]
 };
@@ -95,7 +96,7 @@ const SkillsSection = () => {
     })
 
     return (
-        <section id='skills' className='pt-20 pb-36 relative mb-20'>
+        <section id='skills' className='pt-20 pb-16 mb:pb-36 relative md:mb-36'>
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
 
             <div className='absolute -left-0 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -105,10 +106,10 @@ const SkillsSection = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-300">Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Skills</span></h2>
                     <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
-                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">I've gained proficiency in various technologies throughout my career. Here are the key tools and frameworks I use to build exceptional products.</p>
+                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">From crafting sleek, responsive UIs to engineering robust backends, I work across the full stack with modern JavaScript frameworks, cloud tools, and databases. My toolkit evolves constantly — recently expanding with Sanity CMS and NextAuth.js — to deliver efficient, scalable, and user-driven solutions.</p>
                 </div>
 
-                <div className='flex flex-col gap-0 lg:px-8 xl:px-20 2xl:px-24' ref={container}>
+                <div className='flex flex-col gap-y-4 md:gap-0 lg:px-8 xl:px-20 2xl:px-24' ref={container}>
                     {Object.entries(skillsData).map(([category, skills], index) => {
                         const targetScale = Math.min(1 + index * 0.02, 1.2);
                         return (

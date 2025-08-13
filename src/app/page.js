@@ -2,6 +2,7 @@
 
 import AboutSection from "@/components/ui/AboutSection";
 import ContactSection from "@/components/ui/ContactSection";
+import EducationSection from "@/components/ui/EducationSection";
 import HeroComponent from "@/components/ui/HeroComponent";
 import ProjectsSection from "@/components/ui/ProjectsSection";
 import SkillsSection from "@/components/ui/SkillsSection";
@@ -18,6 +19,7 @@ export default function Home() {
         <Timeline />
       </section>
       <SkillsSection />
+      <EducationSection />
       <ContactSection />
     </>
   );

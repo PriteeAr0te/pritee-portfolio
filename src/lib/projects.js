@@ -30,7 +30,7 @@ const projects = [
     category: "Full Stack",
     categoryColor: "bg-purple-500/10 text-purple-300 border border-purple-500/20",
     description:
-      "A creator & developer showcase platform where talents can create rich public profiles under categories. Visitors can explore without login. Features include media uploads, category-based search, profile discovery, and secure backend APIs.",
+      "A creator and developer showcase platform with responsive, mobile-first UI and intuitive UX for effortless browsing. Implemented rich profile creation with media uploads, category-based discovery, and no-login exploration. Engineered secure backend APIs, optimized queries for faster search, and designed the architecture for scalable high-traffic performance.",
     skills: [
       { name: "Next.js", colorClasses: "bg-black/20 text-white border-black/20" },
       { name: "TypeScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
@@ -50,7 +50,7 @@ const projects = [
     category: "Full Stack",
     categoryColor: "bg-emerald-500/10 text-emerald-300 border border-emerald-500/20",
     description:
-      "A secure, feature-rich contact management app with authentication, contact sharing between users, activity logs, export/import, and analytics dashboard. Designed with user-friendly UX and granular access control.",
+      "A secure, responsive contact management application with authentication, role-based sharing, activity logs, and analytics dashboard. Prioritized clean, accessible UX for efficient contact organization across devices. Built granular access control and optimized backend operations to handle large contact datasets with speed and reliability.",
     skills: [
       { name: "React.js", colorClasses: "bg-blue-600/20 text-blue-300 border-blue-600/20" },
       { name: "JavaScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
@@ -70,7 +70,7 @@ const projects = [
     category: "Full Stack",
     categoryColor: "bg-indigo-500/10 text-indigo-300 border border-indigo-500/20",
     description:
-      "A Next.js SaaS-style directory featuring SEO optimization, Partial Prerendering (PPR), Sanity CMS integration, NextAuth authentication, and robust data validation with Zod.",
+      "A SaaS-style business directory built with Next.js and SEO-focused architecture. Leveraged Partial Prerendering (PPR) for fast load times, integrated Sanity CMS for content management, implemented NextAuth for authentication, and enforced data integrity with Zod validation. Designed for seamless scalability and discoverability.",
     skills: [
       { name: "Next.js", colorClasses: "bg-black/20 text-white border-black/20" },
       { name: "TypeScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
@@ -88,7 +88,7 @@ const projects = [
     category: "Frontend",
     categoryColor: "bg-green-500/10 text-green-300 border border-green-500/20",
     description:
-      "An Amazon-like e-commerce platform with authentication, product browsing, cart functionality, and secure backend services for data handling.",
+      "An Amazon-like e-commerce platform with responsive browsing, secure authentication, and cart management. Built with Redux for state management, optimized performance, and styled with Tailwind CSS for a consistent UI.",
     skills: [
       { name: "React.js", colorClasses: "bg-blue-600/20 text-blue-300 border-blue-600/20" },
       { name: "JavaScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
@@ -104,7 +104,7 @@ const projects = [
     category: "Frontend",
     categoryColor: "bg-blue-500/10 text-blue-300 border border-blue-500/20",
     description:
-      "A modern job portal UI that enables job seekers to browse, filter, and explore opportunities with responsive layouts and intuitive navigation.",
+      "A modern, responsive job portal UI enabling users to browse, filter, and explore listings with intuitive navigation. Focused on accessible layouts, clean component structure, and mobile-friendly design principles.",
     skills: [
       { name: "React.js", colorClasses: "bg-blue-600/20 text-blue-300 border-blue-600/20" },
       { name: "JavaScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
@@ -118,7 +118,7 @@ const projects = [
     category: "Frontend",
     categoryColor: "bg-pink-500/10 text-pink-300 border border-pink-500/20",
     description:
-      "A Spotify-inspired music player with play, pause, previous, next, and timeline control. Fully responsive and built as a first dive into interactive web experiences.",
+      "A beginner-level, Spotify-inspired music player with basic playback controls and responsive design. Served as a foundational step in learning interactive web development and media handling.",
     skills: [
       { name: "HTML", colorClasses: "bg-red-500/20 text-red-300 border-red-500/20" },
       { name: "CSS", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
