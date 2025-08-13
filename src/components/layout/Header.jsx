@@ -37,9 +37,10 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
+            className='cursor-pointer'
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {theme === "dark" ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
           </Button>
         </div>
 

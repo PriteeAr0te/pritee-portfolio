@@ -95,7 +95,7 @@ const SkillsSection = () => {
     })
 
     return (
-        <section id='skills' className='py-20 relative mb-20'>
+        <section id='skills' className='pt-20 pb-36 relative mb-20'>
             <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/20 to-transparent"></div>
 
             <div className='absolute -left-0 top-40 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl'></div>
@@ -103,9 +103,9 @@ const SkillsSection = () => {
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Skills</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-300">Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Skills</span></h2>
                     <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
-                    <p className="mt-6 text-gray-300 max-w-2xl mx-auto">I've gained proficiency in various technologies throughout my career. Here are the key tools and frameworks I use to build exceptional products.</p>
+                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">I've gained proficiency in various technologies throughout my career. Here are the key tools and frameworks I use to build exceptional products.</p>
                 </div>
 
                 <div className='flex flex-col gap-0 lg:px-8 xl:px-20 2xl:px-24' ref={container}>

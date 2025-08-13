@@ -12,10 +12,10 @@ const ProjectsSection = () => {
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Projects</span></h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Projects</span></h2>
 
                     <div className="mt-4 h-1 w-40 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
-                    <p className="mt-6 text-gray-300 max-w-2xl mx-auto">Here's a selection of projects that showcase my skills and passion for building exceptional digital experiences across different platforms.</p>
+                    <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">Here's a selection of projects that showcase my skills and passion for building exceptional digital experiences across different platforms.</p>
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
                 </div>
 
                 <div className="mt-14 text-center">
-                    <Link href="https://github.com/PriteeAr0te" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 rounded-full font-medium items-center justify-center transition-all-duration-300 bg-gray-800/60 text-white backdrop-blur-sm border border-gray-700 hover:bg-gray-700/60 hover:border-emerald-500/30 shadow-lg hover:shadow-emerald-500/10 hover:translate-y-[-3px] inline-flex transition-transform duration-300">
+                    <Link href="https://github.com/PriteeAr0te" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 rounded-full font-medium items-center justify-center transition-all-duration-300 bg-emerald-100 dark:bg-gray-800/60 text-slate-900 dark:text-white backdrop-blur-sm border border-gray-700 hover:bg-gray-700/60 hover:border-emerald-500/30 shadow-lg hover:shadow-emerald-500/10 hover:translate-y-[-3px] inline-flex transition-transform duration-300">
                         <span className="flex items-center">
                             <span>View More Projects</span>
                             <div className="ml-2 ">

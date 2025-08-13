@@ -11,12 +11,12 @@ const Timeline = () => {
             <div className='absolute -right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='text-center mb-12'>
-                    <h2 id='about-title' className='text-3xl md:text-4xl font-bold text-white'>Professional <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Experience</span></h2>
+                    <h2 id='about-title' className='text-3xl md:text-4xl font-bold text-slate-900 dark:text-white'>Professional <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Experience</span></h2>
                     <div className='mt-4 h-1 w-80 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full'></div>
                 </div>
                 <div className='timeline relative isolate w-full my-6 z-0'>
                     <div className='container left-container px-10 py-4 relative w-[85%] sm:w-[50%]'>
-                        <div className='text-box relative z-10 p-4 bg-card-bg border shadow-xl border-card-border text-gray-100 rounded-lg text-left'>
+                        <div className='text-box relative z-10 p-4 bg-emerald-50 dark:bg-card-bg border border-gray-700/50 hover:border-emerald-500/50 shadow-lg hover:shadow-lg shadow-black/20 hover:shadow-emerald-500/10 hover:translate-y-[-5px] transition-all duration-500 text-gray-900 dark:text-gray-100 rounded-lg text-left'>
                             <div className='absolute w-[40px] h-[40px] timeline-img rounded-full top-[32px] z-50'>
                                 <Image alt="Pritee Arote" src={AgastiTech} height={40} width={40} className='rounded-full' />
                             </div>
@@ -28,7 +28,7 @@ const Timeline = () => {
                     </div>
 
                     <div className='container right-container px-10 py-4 relative w-[85%] sm:w-[50%]'>
-                        <div className='text-box p-4 bg-card-bg relative rounded-lg border shadow-xl border-card-border text-gray-100 text-left'>
+                        <div className='text-box p-4 bg-emerald-50 dark:bg-card-bg relative rounded-lg border border-gray-700/50 hover:border-emerald-500/50 shadow-lg hover:shadow-lg shadow-black/20 hover:shadow-emerald-500/10 hover:translate-y-[-5px] transition-all duration-500 text-gray-900 dark:text-gray-100 text-left'>
                             <div className='absolute w-[40px] h-[40px] timeline-img rounded-full top-[32px] z-50'>
                                 <Image alt="Dreams International" src={DI} height={40} width={40} className='rounded-full z-30' />
                             </div>
@@ -39,7 +39,7 @@ const Timeline = () => {
                         </div>
                     </div>
                     <div className='container left-container px-10 py-4 relative w-[85%] sm:w-[50%]'>
-                        <div className='text-box p-4 bg-card-bg relative rounded-lg border shadow-xl border-card-border text-gray-100 text-left'>
+                        <div className='text-box p-4 bg-emerald-50 dark:bg-card-bg relative rounded-lg border border-gray-700/50 hover:border-emerald-500/50 shadow-lg hover:shadow-lg shadow-black/20 hover:shadow-emerald-500/10 hover:translate-y-[-5px] transition-all duration-500 text-gray-900 dark:text-gray-100 text-left'>
                             <div className='absolute w-[40px] h-[40px] timeline-img rounded-full top-[32px] z-50'>
                                 <Image alt='Dreams International' src={DI} height={40} width={40} className='rounded-full z-30' />
                             </div>
@@ -50,7 +50,7 @@ const Timeline = () => {
                         </div>
                     </div>
                     <div className='container right-container px-10 py-4 relative w-[85%] sm:w-[50%]'>
-                        <div className='text-box p-4 bg-card-bg relative rounded-lg border shadow-xl border-card-border text-gray-100 text-left'>
+                        <div className='text-box p-4 bg-emerald-50 dark:bg-card-bg relative rounded-lg border border-gray-700/50 hover:border-emerald-500/50 shadow-lg hover:shadow-lg shadow-black/20 hover:shadow-emerald-500/10 hover:translate-y-[-5px] transition-all duration-500 text-gray-900 dark:text-gray-100 text-left'>
                             <div className='absolute w-[40px] h-[40px] timeline-img rounded-full top-[32px] z-50'>
                                 <Image alt='Agasti Technologies' src={AgastiTech} height={40} width={40} className='rounded-full z-30' />
                             </div>

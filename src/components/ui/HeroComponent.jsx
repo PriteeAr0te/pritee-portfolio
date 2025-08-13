@@ -3,6 +3,7 @@ import React from 'react'
 import Me from '../../../public/img/its-me.png'
 import Image from 'next/image'
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter  } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { TypeAnimation } from 'react-type-animation';
 
@@ -36,7 +37,7 @@ const HeroComponent = () => {
                         <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-20 xl:mr-22'>Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Pritee Arote </span></h1>
                         <div className='h-12 mb-4 overflow-hidden'>
                             <div className='relative h-full flex gap-2 items-center justify-center lg:justify-start'>
-                                <span className='text-xl sm:text-xl text-gray-300 flex flex-wrap'>I'm passionate about</span>
+                                <span className='text-xl sm:text-xl text-gray-900 font-medium dark:text-gray-300 flex flex-wrap'>I'm passionate about</span>
                                 <span className="font-semibold text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500 tracking-wider">
                                     <TypeAnimation
                                         sequence={[
@@ -61,7 +62,7 @@ const HeroComponent = () => {
                                 </span>
                             </div>
                         </div>
-                        <p className='text-lg text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8'>I bring frontend finesse and backend brains together to build fast, scalable, and user-focused digital products. Whether it’s solving real-world problems, optimizing performance, or delivering pixel-perfect interfaces — I care about code that works and design that speaks.</p>
+                        <p className='text-lg text-gray-900 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 mb-8'>I bring frontend finesse and backend brains together to build fast, scalable, and user-focused digital products. Whether it’s solving real-world problems, optimizing performance, or delivering pixel-perfect interfaces — I care about code that works and design that speaks.</p>
 
                         <div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6'>
                             <Link href="https://drive.google.com/file/d/17J1bN70D8girOW6wqLXEbTXp0o7t11_o/view?usp=sharing" target='_blank' className="group relative px-6 py-3 rounded-full font-medium items-center justify-center bg-gradient-to-r from-emerald-600 to-blue-600 text-white shadow-lg shadow-emerald-600/20 hover:shadow-emerald-600/40  inline-flex transition-transform duration-300">
@@ -80,6 +81,9 @@ const HeroComponent = () => {
                                 <Link href="https://leetcode.com/u/PriteeArote/" target='_blank' className='min-w-[42px] min-h-[42px] max-w-[42px] max-h-[42px] rounded-full relative hover:bg-gradient-to-b from-blue-500 to-emerald-500 hover:text-gray-900 font-medium items-center justify-center inline-flex border-[1.5px] border-gray-600 hover:border-emerald-500/50 transition-colors duration-300 ease-in-out'>
                                     <SiLeetcode size={20} />
                                 </Link>
+                                <Link href="https://x.com/PriteeArot75040" target='_blank' className='min-w-[42px] min-h-[42px] max-w-[42px] max-h-[42px] rounded-full relative hover:bg-gradient-to-b from-blue-500 to-emerald-500 hover:text-gray-900 font-medium items-center justify-center inline-flex border-[1.5px] border-gray-600 hover:border-emerald-500/50 transition-colors duration-300 ease-in-out'>
+                                    <FaXTwitter size={20} />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -93,7 +97,7 @@ const HeroComponent = () => {
             </div>
 
             <div className='absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20'>
-                <span className='text-gray-100 text-sm mb-2 animate-pulse'>
+                <span className='text-gray-800 dark:text-gray-100 text-sm mb-2 animate-pulse'>
                     Explore my work
                 </span>
                 <span className="animate-bounce">
