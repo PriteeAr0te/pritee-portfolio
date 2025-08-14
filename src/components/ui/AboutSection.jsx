@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from 'framer-motion';
 
 const AboutSection = () => {
     return (
@@ -8,7 +9,7 @@ const AboutSection = () => {
             <div className='absolute right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
             <div className='max-w-7xl mx-auto'>
                 <div className='text-center mb-12'>
-                    <h2 id='about-title' className='text-3xl md:text-4xl font-bold text-slate-900 dark:text-white'>About <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Me</span></h2>
+                    <motion.h2 id='about-title' className='text-3xl md:text-4xl font-bold text-slate-900 dark:text-white'>About <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Me</span></motion.h2>
                     <div className='mt-4 h-1 w-28 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full'></div>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 items-stretch'>
