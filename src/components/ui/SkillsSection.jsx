@@ -34,6 +34,7 @@ import Sanity from '../../../public/img/sanity.png'
 import NextAuth from '../../../public/img/next-auth.png'
 import SkillCard from './SkillCard'
 import Lenis from 'lenis'
+import { motion } from 'framer-motion';
 
 const skillsData = {
     frontend: [
@@ -101,11 +102,16 @@ const SkillsSection = () => {
             <div className='absolute -right-0 bottom-40 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl'></div>
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className="text-center mb-12">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 1.1, ease: "easeOut" }}
+                    className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-300">Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Skills</span></h2>
                     <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
                     <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">From crafting sleek, responsive UIs to engineering robust backends, I work across the full stack with modern JavaScript frameworks, cloud tools, and databases. My toolkit evolves constantly — recently expanding with Sanity CMS and NextAuth.js — to deliver efficient, scalable, and user-driven solutions.</p>
-                </div>
+                </motion.div>
 
                 <div className='flex flex-col gap-y-4 md:gap-0 lg:px-8 xl:px-20 2xl:px-24' ref={container}>
                     {Object.entries(skillsData).map(([category, skills], index) => {

@@ -1,9 +1,21 @@
-import { useTheme } from 'next-themes';
 import React from 'react';
+import { motion } from 'framer-motion'
 
 const ContactSection
     = () => {
-        const { theme } = useTheme()
+        const cardVariants = {
+            hidden: { opacity: 0, y: 40 },
+            visible: (i) => ({
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 0.6,
+                    ease: "easeOut",
+                    delay: i * 0.15,
+                },
+            }),
+        };
+
         return (
             <section className='py-16 overflow-x-hidden relative text-center' id='contact'>
                 <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
@@ -11,268 +23,299 @@ const ContactSection
                 <div className='absolute -left-0 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
 
                 <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                    <div className="text-center mb-12">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1.1, ease: "easeOut" }}
+                        className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Connect <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">With Me</span></h2>
                         <div className="mt-4 h-1 w-20 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
                         <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">I’m exploring opportunities to bring my skills, creativity, and passion for clean, impactful code to life.
                             Whether it’s collaborating on ambitious projects, solving real-world problems, or exchanging ideas — let’s connect and make it happen. Drop me a message, and let’s turn possibilities into reality.</p>
-                    </div>
+                    </motion.div>
 
                     <div className="max-w-3xl mx-auto" style={{ opacity: 1 }}>
                         <div className="jsx-4d94da9e2103df9c grid grid-cols-2 md:grid-cols-4 gap-6">
-                            <div
-                                className="w-full rounded-2xl"
-                                style={{
-                                    opacity: 1,
-                                    transform: "none",
-                                    boxShadow: "rgba(110, 118, 129, 0.15) 0px 0px 0px",
-                                }}
-                            >
-                                <a
-                                    href="https://github.com/PriteeAr0te"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block h-full bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden text-black group relative"
-                                    style={{
-                                        boxShadow:
-                                            "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(110, 118, 129, 0.1) 0px 2px 4px"
-                                    }}
+                            {[0, 1, 2, 3].map((_, index) => (
+                                <motion.div
+                                    key={index}
+                                    custom={index}             // for stagger
+                                    variants={cardVariants}    // apply animation
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true, amount: 0.3 }}
                                 >
-                                    <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    {index === 0 && (
                                         <div
-                                            className="absolute inset-0 rounded-2xl"
+                                            className="w-full rounded-2xl"
                                             style={{
-                                                background:
-                                                    "linear-gradient(45deg, rgba(110, 118, 129, 0.5), rgba(110, 118, 129, 0.1), rgba(110, 118, 129, 0.5)) 0% 0% / 200% 200%",
-                                                animation:
-                                                    "3s linear 0s infinite normal none running gradientBorder"
-                                            }}
-                                        ></div>
-                                    </div>
-                                    <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
-                                        <div
-                                            className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(135deg, rgba(110, 118, 129, 0.125), rgba(110, 118, 129, 0.25))",
-                                                boxShadow: "rgba(110, 118, 129, 0.15) 0px 4px 12px"
+                                                opacity: 1,
+                                                transform: "none",
+                                                boxShadow: "rgba(110, 118, 129, 0.15) 0px 0px 0px",
                                             }}
                                         >
-                                            <div className="text-2xl" style={{ color: "rgb(110, 118, 129)" }}>
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width={20}
-                                                    height={20}
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="lucide lucide-github"
-                                                >
-                                                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                                                    <path d="M9 18c-4.51 2-5-2-7-2" />
-                                                </svg>
-                                            </div>
+                                            <a
+                                                href="https://github.com/PriteeAr0te"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block h-full bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden text-black group relative"
+                                                style={{
+                                                    boxShadow:
+                                                        "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(110, 118, 129, 0.1) 0px 2px 4px"
+                                                }}
+                                            >
+                                                <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                    <div
+                                                        className="absolute inset-0 rounded-2xl"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(45deg, rgba(110, 118, 129, 0.5), rgba(110, 118, 129, 0.1), rgba(110, 118, 129, 0.5)) 0% 0% / 200% 200%",
+                                                            animation:
+                                                                "3s linear 0s infinite normal none running gradientBorder"
+                                                        }}
+                                                    ></div>
+                                                </div>
+                                                <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
+                                                    <div
+                                                        className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(135deg, rgba(110, 118, 129, 0.125), rgba(110, 118, 129, 0.25))",
+                                                            boxShadow: "rgba(110, 118, 129, 0.15) 0px 4px 12px"
+                                                        }}
+                                                    >
+                                                        <div className="text-2xl" style={{ color: "rgb(110, 118, 129)" }}>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width={20}
+                                                                height={20}
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                className="lucide lucide-github"
+                                                            >
+                                                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                                                <path d="M9 18c-4.51 2-5-2-7-2" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <span className="text-l font-medium text-slate-900 dark:text-white mb-1">GitHub</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <span className="text-l font-medium text-slate-900 dark:text-white mb-1">GitHub</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                className="w-full rounded-2xl"
-                                style={{
-                                    opacity: 1,
-                                    transform: "none",
-                                    boxShadow: "rgba(0, 119, 181, 0.15) 0px 0px 0px"
-                                }}
-                            >
-                                <a
-                                    href="https://www.linkedin.com/in/pritee-reactdev"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
-                                    style={{
-                                        boxShadow:
-                                            "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(0, 119, 181, 0.1) 0px 2px 4px"
-                                    }}
-                                >
-                                    <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    )}
+                                    {index === 1 && (
                                         <div
-                                            className="absolute inset-0 rounded-2xl"
+                                            className="w-full rounded-2xl"
                                             style={{
-                                                background:
-                                                    "linear-gradient(45deg, rgba(0, 119, 181, 0.5), rgba(0, 119, 181, 0.1), rgba(0, 119, 181, 0.5)) 0% 0% / 200% 200%",
-                                                animation:
-                                                    "3s linear 0s infinite normal none running gradientBorder"
-                                            }}
-                                        ></div>
-                                    </div>
-                                    <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
-                                        <div
-                                            className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(135deg, rgba(0, 119, 181, 0.125), rgba(0, 119, 181, 0.25))",
-                                                boxShadow: "rgba(0, 119, 181, 0.15) 0px 4px 12px"
+                                                opacity: 1,
+                                                transform: "none",
+                                                boxShadow: "rgba(0, 119, 181, 0.15) 0px 0px 0px"
                                             }}
                                         >
-                                            <div className="text-2xl" style={{ color: "rgb(0, 119, 181)" }}>
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width={20}
-                                                    height={20}
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="lucide lucide-linkedin"
-                                                >
-                                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                                                    <rect width={4} height={12} x={2} y={9} />
-                                                    <circle cx={4} cy={4} r={2} />
-                                                </svg>
-                                            </div>
+                                            <a
+                                                href="https://www.linkedin.com/in/pritee-reactdev"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
+                                                style={{
+                                                    boxShadow:
+                                                        "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(0, 119, 181, 0.1) 0px 2px 4px"
+                                                }}
+                                            >
+                                                <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                    <div
+                                                        className="absolute inset-0 rounded-2xl"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(45deg, rgba(0, 119, 181, 0.5), rgba(0, 119, 181, 0.1), rgba(0, 119, 181, 0.5)) 0% 0% / 200% 200%",
+                                                            animation:
+                                                                "3s linear 0s infinite normal none running gradientBorder"
+                                                        }}
+                                                    ></div>
+                                                </div>
+                                                <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
+                                                    <div
+                                                        className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(135deg, rgba(0, 119, 181, 0.125), rgba(0, 119, 181, 0.25))",
+                                                            boxShadow: "rgba(0, 119, 181, 0.15) 0px 4px 12px"
+                                                        }}
+                                                    >
+                                                        <div className="text-2xl" style={{ color: "rgb(0, 119, 181)" }}>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width={20}
+                                                                height={20}
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                className="lucide lucide-linkedin"
+                                                            >
+                                                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                                                <rect width={4} height={12} x={2} y={9} />
+                                                                <circle cx={4} cy={4} r={2} />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <span className="text-l font-medium text-slate-900 dark:text-white mb-1">LinkedIn</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <span className="text-l font-medium text-slate-900 dark:text-white mb-1">LinkedIn</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                className="w-full rounded-2xl"
-                                style={{
-                                    opacity: 1,
-                                    transform: "none",
-                                    boxShadow: "rgba(212, 70, 56, 0.15) 0px 0px 0px"
-                                }}
-                            >
-                                <a
-                                    href="mailto:priteerote.dev@gmail.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
-                                    style={{
-                                        boxShadow:
-                                            "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(212, 70, 56, 0.1) 0px 2px 4px"
-                                    }}
-                                >
-                                    <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    )}
+                                    {index === 2 && (
                                         <div
-                                            className="absolute inset-0 rounded-2xl"
+                                            className="w-full rounded-2xl"
                                             style={{
-                                                background:
-                                                    "linear-gradient(45deg, rgba(212, 70, 56, 0.5), rgba(212, 70, 56, 0.1), rgba(212, 70, 56, 0.5)) 0% 0% / 200% 200%",
-                                                animation:
-                                                    "3s linear 0s infinite normal none running gradientBorder"
-                                            }}
-                                        ></div>
-                                    </div>
-                                    <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
-                                        <div
-                                            className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(135deg, rgba(212, 70, 56, 0.125), rgba(212, 70, 56, 0.25))",
-                                                boxShadow: "rgba(212, 70, 56, 0.15) 0px 4px 12px"
+                                                opacity: 1,
+                                                transform: "none",
+                                                boxShadow: "rgba(212, 70, 56, 0.15) 0px 0px 0px"
                                             }}
                                         >
-                                            <div className="text-2xl" style={{ color: "rgb(212, 70, 56)" }}>
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width={20}
-                                                    height={20}
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="lucide lucide-mail"
-                                                >
-                                                    <rect width={20} height={16} x={2} y={4} rx={2} />
-                                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                                                </svg>
-                                            </div>
+                                            <a
+                                                href="mailto:priteerote.dev@gmail.com"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
+                                                style={{
+                                                    boxShadow:
+                                                        "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(212, 70, 56, 0.1) 0px 2px 4px"
+                                                }}
+                                            >
+                                                <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                    <div
+                                                        className="absolute inset-0 rounded-2xl"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(45deg, rgba(212, 70, 56, 0.5), rgba(212, 70, 56, 0.1), rgba(212, 70, 56, 0.5)) 0% 0% / 200% 200%",
+                                                            animation:
+                                                                "3s linear 0s infinite normal none running gradientBorder"
+                                                        }}
+                                                    ></div>
+                                                </div>
+                                                <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
+                                                    <div
+                                                        className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(135deg, rgba(212, 70, 56, 0.125), rgba(212, 70, 56, 0.25))",
+                                                            boxShadow: "rgba(212, 70, 56, 0.15) 0px 4px 12px"
+                                                        }}
+                                                    >
+                                                        <div className="text-2xl" style={{ color: "rgb(212, 70, 56)" }}>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width={20}
+                                                                height={20}
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                className="lucide lucide-mail"
+                                                            >
+                                                                <rect width={20} height={16} x={2} y={4} rx={2} />
+                                                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <span className="text-l font-medium text-slate-900 dark:text-white mb-1">Email</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <span className="text-l font-medium text-slate-900 dark:text-white mb-1">Email</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                className="w-full rounded-2xl"
-                                style={{
-                                    opacity: 1,
-                                    transform: "none",
-                                    boxShadow: "rgba(29, 161, 242, 0.15) 0px 0px 0px"
-                                }}
-                            >
-                                <a
-                                    href="https://www.x.com/PriteeArot75040"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
-                                    style={{
-                                        boxShadow:
-                                            "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(29, 161, 242, 0.1) 0px 2px 4px"
-                                    }}
-                                >
-                                    <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                    )}
+                                    {index === 3 && (
                                         <div
-                                            className="absolute inset-0 rounded-2xl"
+                                            className="w-full rounded-2xl"
                                             style={{
-                                                background:
-                                                    "linear-gradient(45deg, rgba(29, 161, 242, 0.5), rgba(29, 161, 242, 0.1), rgba(29, 161, 242, 0.5)) 0% 0% / 200% 200%",
-                                                animation:
-                                                    "3s linear 0s infinite normal none running gradientBorder"
-                                            }}
-                                        ></div>
-                                    </div>
-                                    <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
-                                        <div
-                                            className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(135deg, rgba(29, 161, 242, 0.125), rgba(29, 161, 242, 0.25))",
-                                                boxShadow: "rgba(29, 161, 242, 0.15) 0px 4px 12px"
+                                                opacity: 1,
+                                                transform: "none",
+                                                boxShadow: "rgba(29, 161, 242, 0.15) 0px 0px 0px"
                                             }}
                                         >
-                                            <div className="text-2xl" style={{ color: "rgb(29, 161, 242)" }}>
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    width={20}
-                                                    height={20}
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    stroke="currentColor"
-                                                    strokeWidth={2}
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    className="lucide lucide-twitter"
-                                                >
-                                                    <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                                                </svg>
-                                            </div>
+                                            <a
+                                                href="https://www.x.com/PriteeArot75040"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="block h-full bg-emerald-50 dark:bg-gray-800/40  backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-opacity-0 transition-all duration-300 overflow-hidden group relative"
+                                                style={{
+                                                    boxShadow:
+                                                        "rgba(0, 0, 0, 0.1) 0px 8px 16px, rgba(29, 161, 242, 0.1) 0px 2px 4px"
+                                                }}
+                                            >
+                                                <div className="absolute inset-0 p-[1px] rounded-2xl overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                                    <div
+                                                        className="absolute inset-0 rounded-2xl"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(45deg, rgba(29, 161, 242, 0.5), rgba(29, 161, 242, 0.1), rgba(29, 161, 242, 0.5)) 0% 0% / 200% 200%",
+                                                            animation:
+                                                                "3s linear 0s infinite normal none running gradientBorder"
+                                                        }}
+                                                    ></div>
+                                                </div>
+                                                <div className="relative flex flex-col items-center text-center p-6 h-full z-10">
+                                                    <div
+                                                        className="w-16 h-16 rounded-full flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(135deg, rgba(29, 161, 242, 0.125), rgba(29, 161, 242, 0.25))",
+                                                            boxShadow: "rgba(29, 161, 242, 0.15) 0px 4px 12px"
+                                                        }}
+                                                    >
+                                                        <div className="text-2xl" style={{ color: "rgb(29, 161, 242)" }}>
+                                                            <svg
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width={20}
+                                                                height={20}
+                                                                viewBox="0 0 24 24"
+                                                                fill="none"
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                className="lucide lucide-twitter"
+                                                            >
+                                                                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <span className="text-l font-medium text-slate-900 dark:text-white mb-1">Twitter</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <span className="text-l font-medium text-slate-900 dark:text-white mb-1">Twitter</span>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                                    )}
+                                </motion.div>
+                            ))
+                            }
+                        </div >
 
-                    <div className="mt-16 text-center max-w-3xl xl:max-w-2xl mx-auto">
+                    </div >
+
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1.1, ease: "easeOut" }}
+                        className="mt-16 text-center max-w-3xl xl:max-w-2xl mx-auto">
                         <p className="text-xl md:text-2xl xl:text-4xl font-semibold text-gray-900 dark:text-gray-200 italic">
                             "I design with intent, code with precision, and build to make an impact."
                         </p>
                         <p className="mt-4 text-3xl font-bold text-emerald-500 dancing-script">— Pritee</p>
-                    </div>
+                    </motion.div>
 
-                </div>
+                </div >
 
-            </section>
+            </section >
         )
     }
 

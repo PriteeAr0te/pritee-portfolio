@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectCarousel from "./ProjectCarousel";
+import { motion, easeOut } from 'framer-motion'
 
 export default function ProjectCard({
   title,
@@ -11,8 +12,18 @@ export default function ProjectCard({
   codeLink,
   carouselData
 }) {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeOut } },
+  };
+
   return (
-    <div className="group h-full">
+    <motion.div
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.4 }}
+      className="group h-full">
       <div className="bg-emerald-50 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-500 h-full flex flex-col
                       border-gray-700/50 group-hover:border-emerald-500/50 shadow-lg group-hover:shadow-xl shadow-black/20 group-hover:shadow-emerald-500/10 group-hover:translate-y-[-5px]">
 
@@ -81,6 +92,6 @@ export default function ProjectCard({
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

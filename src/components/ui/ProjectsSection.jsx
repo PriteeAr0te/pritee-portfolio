@@ -2,8 +2,22 @@ import projects from '@/lib/projects'
 import Link from 'next/link'
 import React from 'react'
 import ProjectCard from './ProjectCard'
+import { motion } from 'framer-motion'
 
 const ProjectsSection = () => {
+    const cardVariants = {
+        hidden: { opacity: 0, x: -40 },
+        visible: (i) => ({
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut",
+                delay: i * 0.2
+            }
+        })
+    };
+
     return (
         <section id='projects' className='py-16 overflow-x-hidden relative text-left'>
             <div className='absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent'></div>
@@ -11,22 +25,44 @@ const ProjectsSection = () => {
             <div className='absolute -left-0 bottom-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl'></div>
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Projects</span></h2>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 1.1, ease: "easeOut" }}
+                    className="text-center mb-12">
+                    <h2
+                        className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">My <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500">Projects</span></h2>
 
                     <div className="mt-4 h-1 w-40 bg-gradient-to-r from-emerald-400 to-blue-500 mx-auto rounded-full"></div>
                     <p className="mt-6 text-gray-900 dark:text-gray-300 max-w-2xl mx-auto">A curated collection of my most impactful work — from responsive, user-focused frontends to scalable full-stack applications.
                         Each project reflects my commitment to clean code, modern tech stacks, and real-world problem solving.</p>
-                </div>
+                </motion.div>
 
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} {...project} />
+                        <motion.div
+                            key={index}
+                            custom={index}
+                            variants={cardVariants}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                        >
+                            <ProjectCard {...project} />
+                        </motion.div>
                     ))}
+
                 </div>
 
-                <div className="mt-14 text-center">
-                    <Link href="https://github.com/PriteeAr0te" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 rounded-full font-medium items-center justify-center transition-all-duration-300 bg-emerald-100 dark:bg-gray-800/60 text-slate-900 dark:text-white backdrop-blur-sm border border-gray-700 hover:bg-gray-700/60 hover:border-emerald-500/30 shadow-lg hover:shadow-emerald-500/10 hover:translate-y-[-3px] inline-flex transition-transform duration-300">
+                <motion.div
+                    className="mt-14 text-center"
+                    initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}>
+                    <Link
+                        transition={{ duration: 1.1, ease: "easeOut" }}
+                        href="https://github.com/PriteeAr0te" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 rounded-full font-medium items-center justify-center transition-all-duration-300 bg-emerald-100 dark:bg-gray-800/60 text-slate-900 dark:text-white backdrop-blur-sm border border-gray-700 hover:bg-gray-700/60 hover:border-emerald-500/30 shadow-lg hover:shadow-emerald-500/10 hover:translate-y-[-3px] inline-flex transition-transform duration-300">
                         <span className="flex items-center">
                             <span>View More Projects</span>
                             <div className="ml-2 ">
@@ -34,7 +70,7 @@ const ProjectsSection = () => {
                             </div>
                         </span>
                     </Link>
-                </div>
+                </motion.div>
             </div>
 
             <div className='absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-emerald-500/50 to-transparent'></div>
