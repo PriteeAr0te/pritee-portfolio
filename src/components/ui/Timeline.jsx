@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import AgastiTech from '../../../public/img/agasti_tech.png';
 import DI from '../../../public/img/dreams.png';
+import Pritee from '../../../public/favicon-2.png';
 
 const Timeline = () => {
     return (
@@ -19,7 +20,7 @@ const Timeline = () => {
                     <div className='container left-container px-10 py-4 relative w-[85%] sm:w-[50%]'>
                         <div className='text-box relative z-10 p-4 bg-emerald-50 dark:bg-card-bg border border-gray-700/50 hover:border-emerald-500/50 shadow-lg hover:shadow-lg shadow-black/20 hover:shadow-emerald-500/10 hover:translate-y-[-5px] transition-all duration-500 text-gray-900 dark:text-gray-100 rounded-lg text-left'>
                             <div className='absolute w-[40px] h-[40px] timeline-img rounded-full top-[32px] z-50'>
-                                <Image alt="Pritee Arote" src={AgastiTech} height={40} width={40} className='rounded-full' />
+                                <Image alt="Pritee Arote" src={Pritee} height={40} width={40} className='rounded-full' />
                             </div>
                             <h2 className='text-xl font-medium pb-0.5 text-left'>Independent Developer – Skill Expansion</h2>
                             <small className='italic text-left mb-4 text-base'>June 2025 - Present</small>
