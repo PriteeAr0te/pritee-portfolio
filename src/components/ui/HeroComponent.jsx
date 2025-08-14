@@ -6,6 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion'
 
 const HeroComponent = () => {
     return (
@@ -33,7 +34,13 @@ const HeroComponent = () => {
             </div>
             <div className="max-w-7xl mx-auto gap-y-4 px-4 sm:px-6 lg:px-8 w-full z-10 flex items-center h-full">
                 <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 items-center w-full'>
-                    <div className='lg:col-span-7 text-center lg:text-left'>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8, y: 30 }}
+                        whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className='lg:col-span-7 text-center lg:text-left'>
+
                         <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-20 xl:mr-22'>Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Pritee Arote </span></h1>
                         <div className='h-12 mb-4 overflow-hidden'>
                             <div className='relative h-full flex gap-2 items-center justify-center lg:justify-start'>
@@ -86,13 +93,19 @@ const HeroComponent = () => {
                                 </Link>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className='lg:col-span-5 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[400px] relative mt-2 sm:mt-0 mb-16 sm:mb-12'>
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+
+                        className='lg:col-span-5 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[400px] relative mt-2 sm:mt-0 mb-16 sm:mb-12'>
                         <div className='w-full h-full flex items-center justify-center'>
-                            <Image src={Me} alt="Its Me - Pritee" height={400} width={400} />
+                            <Image src={Me} alt="Hey, Its Me - Pritee" height={400} width={400} />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
