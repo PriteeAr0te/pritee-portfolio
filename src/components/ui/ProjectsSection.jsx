@@ -59,7 +59,7 @@ const ProjectsSection = () => {
                     className="mt-14 text-center"
                     initial={{ opacity: 0, scale: 0.8, y: 30 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.2 }}>
+                    viewport={{ once: true, amount: 0.3 }}>
                     <Link
                         transition={{ duration: 1.1, ease: "easeOut" }}
                         href="https://github.com/PriteeAr0te" target="_blank" rel="noopener noreferrer" className="group relative px-6 py-3 rounded-full font-medium items-center justify-center transition-all-duration-300 bg-emerald-100 dark:bg-gray-800/60 text-slate-900 dark:text-white backdrop-blur-sm border border-gray-700 hover:bg-gray-700/60 hover:border-emerald-500/30 shadow-lg hover:shadow-emerald-500/10 hover:translate-y-[-3px] inline-flex transition-transform duration-300">

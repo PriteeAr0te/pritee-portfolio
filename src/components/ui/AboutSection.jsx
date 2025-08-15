@@ -1,42 +1,10 @@
 import React from 'react'
-import { motion } from 'framer-motion';
-
-const cards = [
-    {
-        title: "Problem Solver",
-        desc: "I tackle complex challenges with structured thinking, breaking them into actionable steps and delivering efficient, future-ready solutions.",
-        gradient: "from-emerald-500 to-blue-500",
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
-    },
-    {
-        title: "User-Centric Design",
-        desc: "Great software feels effortless. I craft intuitive, engaging interfaces that make user interactions seamless.",
-        gradient: "from-blue-500 to-violet-500",
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-    },
-    {
-        title: "Scalable Engineering",
-        desc: "From APIs to databases, I design systems that grow with demand while maintaining top performance.",
-        gradient: "from-purple-500 to-indigo-500",
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-lightbulb"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
-    },
-    {
-        title: "Continuous Learner",
-        desc: "I stay ahead by exploring modern tools, frameworks, and best practices to deliver cutting-edge solutions.",
-        gradient: "from-indigo-500 to-cyan-500",
-        icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chart-column"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
-    }
-];
+import { motion, easeInOut } from 'framer-motion';
 
 const AboutSection = () => {
     const cardVariants = {
-        hidden: { opacity: 0, y: 40, scale: 0.95 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: { duration: 0.5, ease: "easeOut" }
-        }
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: easeInOut } },
     };
 
     return (
@@ -88,10 +56,10 @@ const AboutSection = () => {
                     <div className='h-full'>
                         <div className='grid grid-cols-1 md:grid-cols-2 gap-6 h-full text-left'>
                             <motion.div
-                                initial={{ y: -50, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                viewport={{ once: true }}
+                                variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
                                 className='bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300'>
                                 <div className='p-6 relative'>
                                     <div className='absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 opacity-10 blur-lg'></div>
@@ -104,10 +72,10 @@ const AboutSection = () => {
                             </motion.div>
 
                             <motion.div
-                                initial={{ y: -50, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                viewport={{ once: true }}
+                                variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
                                 className='bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300'>
                                 <div className='p-6 relative'>
                                     <div className='absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 opacity-10 blur-lg'></div>
@@ -120,10 +88,10 @@ const AboutSection = () => {
                             </motion.div>
 
                             <motion.div
-                                initial={{ y: -50, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                viewport={{ once: true }}
+                                variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
                                 className='bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300'>
                                 <div className='p-6 relative'>
                                     <div className='absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-indigo-500 opacity-10 blur-lg'></div>
@@ -136,10 +104,10 @@ const AboutSection = () => {
                             </motion.div>
 
                             <motion.div
-                                initial={{ y: -50, opacity: 0 }}
-                                whileInView={{ y: 0, opacity: 1 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                viewport={{ once: true }}
+                                variants={cardVariants}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.3 }}
                                 className='bg-emerald-50 dark:bg-gray-800/40 backdrop-blur-sm rounded-2xl border border-gray-700/50 shadow-xl overflow-hidden relative h-full group hover:border-emerald-500/30 transition-all duration-300'>
                                 <div className='p-6 relative'>
                                     <div className='absolute top-6 left-6 w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-10 blur-lg'></div>

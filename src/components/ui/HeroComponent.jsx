@@ -38,7 +38,7 @@ const HeroComponent = () => {
                         initial={{ opacity: 0, scale: 0.8, y: 30 }}
                         whileInView={{ opacity: 1, scale: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 1.1, ease: "easeOut" }}
+                        transition={{ duration: 0.6, ease: "easeOut" }}
                         className='lg:col-span-7 text-center lg:text-left'>
 
                         <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 leading-20 xl:mr-22'>Hi, I'm <span className='text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-500'>Pritee Arote </span></h1>
@@ -99,7 +99,7 @@ const HeroComponent = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true, amount: 0.2 }}
-                        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                        transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
 
                         className='lg:col-span-5 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[400px] relative mt-2 sm:mt-0 mb-16 sm:mb-12'>
                         <div className='w-full h-full flex items-center justify-center'>
