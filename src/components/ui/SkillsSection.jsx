@@ -21,7 +21,6 @@ import Mongo from '../../../public/img/mongodb.png'
 import SQL from '../../../public/img/sql.png'
 import Neo from '../../../public/img/neo.png'
 import Git from '../../../public/img/git.png'
-import Github from '../../../public/img/github.png'
 import Postman from '../../../public/img/postman.png'
 import Vercel from '../../../public/img/vercel.png'
 import Netlify from '../../../public/img/netlify.png'
@@ -31,6 +30,7 @@ import NPM from '../../../public/img/npm.png'
 import AWS from '../../../public/img/aws.png'
 import Notion from '../../../public/img/notion.png'
 import Sanity from '../../../public/img/sanity.png'
+import Tanstack from '../../../public/img/tanstack.png'
 import NextAuth from '../../../public/img/next-auth.png'
 import SkillCard from './SkillCard'
 import Lenis from 'lenis'
@@ -49,6 +49,7 @@ const skillsData = {
         { name: 'CSS3', logo: CSS },
         { name: 'Bootstrap', logo: Bootstarp },
         { name: 'Sanity CMS', logo: Sanity },
+        { name: 'Tanstack Query', logo: Tanstack },
     ],
     backend: [
         { name: 'Node.js', logo: Nodejs },

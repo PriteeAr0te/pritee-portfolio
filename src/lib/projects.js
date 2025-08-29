@@ -39,7 +39,8 @@ const projects = [
       { name: "MongoDB", colorClasses: "bg-green-700/20 text-green-300 border-green-700/20" },
       { name: "TailwindCSS", colorClasses: "bg-cyan-600/20 text-cyan-300 border-cyan-600/20" },
       { name: "Zod", colorClasses: "bg-pink-500/20 text-pink-300 border-pink-500/20" },
-      { name: "Cloudinary", colorClasses: "bg-indigo-500/20 text-indigo-300 border-indigo-500/20" }
+      { name: "Cloudinary", colorClasses: "bg-indigo-500/20 text-indigo-300 border-indigo-500/20" },
+      { name: "React Hook Form", colorClasses: "bg-black/20 text-white border-black/20" },
     ],
     liveLink: "https://www.linkedin.com/in/pritee-reactdev",
     codeLink: "https://github.com/PriteeAr0te/talentdeck",
@@ -57,8 +58,10 @@ const projects = [
       { name: "Node.js", colorClasses: "bg-green-500/20 text-green-300 border-green-500/20" },
       { name: "Express.js", colorClasses: "bg-gray-500/20 text-gray-300 border-gray-500/20" },
       { name: "MongoDB", colorClasses: "bg-green-700/20 text-green-300 border-green-700/20" },
+      { name: "MongoDB", colorClasses: "bg-green-700/20 text-green-300 border-green-700/20" },
       { name: "TailwindCSS", colorClasses: "bg-cyan-600/20 text-cyan-300 border-cyan-600/20" },
       { name: "Cloudinary", colorClasses: "bg-indigo-500/20 text-indigo-300 border-indigo-500/20" },
+      { name: "Tanstack Query", colorClasses: "bg-emerald-500/20 text-emerald-300 border-emerald-500/20" },
       { name: "Redux", colorClasses: "bg-purple-500/20 text-purple-300 border-purple-500/20" },
     ],
     liveLink: "https://smart-contact-book.netlify.app",
@@ -76,6 +79,7 @@ const projects = [
       { name: "TypeScript", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
       { name: "PPR", colorClasses: "bg-emerald-500/20 text-emerald-300 border-emerald-500/20" },
       { name: "Sanity", colorClasses: "bg-red-500/20 text-red-300 border-red-500/20" },
+      { name: "Sentry", colorClasses: "bg-black/20 text-white border-black/20" },
       { name: "NextAuth", colorClasses: "bg-blue-500/20 text-blue-300 border-blue-500/20" },
       { name: "Zod", colorClasses: "bg-pink-500/20 text-pink-300 border-pink-500/20" },
       { name: "TailwindCSS", colorClasses: "bg-cyan-600/20 text-cyan-300 border-cyan-600/20" }
