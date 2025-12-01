@@ -69,12 +69,12 @@ export default function LeetCodeAchievements() {
               className="group h-full">
               <div className="p-6 bg-emerald-50 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-500 flex flex-col
                       border-gray-700/50 group-hover:border-emerald-500/50 shadow-lg group-hover:shadow-xl shadow-black/20 group-hover:shadow-emerald-500/10 group-hover:translate-y-[-5px]">
-                <p className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
+                <p className="text-gray-900 dark:text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
                   Problems Solved
                 </p>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <h3 className="text-6xl font-bold text-white">140</h3>
-                  <span className="text-gray-300 text-lg">/3730</span>
+                  <h3 className="text-6xl font-bold text-gray-900 dark:text-white">140</h3>
+                  <span className="text-gray-700 dark:text-gray-300 text-lg">/3730</span>
                 </div>
                 <div className="w-full h-1 bg-gray-900 rounded-full overflow-hidden">
                   <div
@@ -93,11 +93,11 @@ export default function LeetCodeAchievements() {
               className="group h-full">
               <div className="p-6 bg-emerald-50 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-500 h-full flex flex-col
                       border-gray-700/50 group-hover:border-emerald-500/50 shadow-lg group-hover:shadow-xl shadow-black/20 group-hover:shadow-emerald-500/10 group-hover:translate-y-[-5px]">
-                <p className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
+                <p className="text-gray-900 dark:text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
                   Current Streak
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <h3 className="text-6xl font-bold text-white">{loading ? "..." : streak}</h3>
+                  <h3 className="text-6xl font-bold text-gray-900 dark:text-white">{loading ? "..." : streak}</h3>
                   <span className="text-cyan-400 text-lg font-semibold">Days 🔥</span>
                 </div>
               </div>
@@ -111,14 +111,14 @@ export default function LeetCodeAchievements() {
               className="group h-full">
               <div className="p-6 bg-emerald-50 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border transition-all duration-500 h-full flex flex-col
                       border-gray-700/50 group-hover:border-emerald-500/50 shadow-lg group-hover:shadow-xl shadow-black/20 group-hover:shadow-emerald-500/10 group-hover:translate-y-[-5px]">
-                <p className="text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
+                <p className="text-gray-900 dark:text-gray-300 text-sm font-semibold mb-3 uppercase tracking-wide">
                   Active Days
                 </p>
                 <div className="flex items-baseline gap-2">
-                  <h3 className="text-6xl font-bold text-white">
+                  <h3 className="text-6xl font-bold text-gray-900 dark:text-white">
                     {loading ? "..." : activeDays}
                   </h3>
-                  <span className="text-gray-400 text-lg">Total</span>
+                  <span className="text-gray-900 dark:text-gray-300 text-lg">Total</span>
                 </div>
               </div>
             </motion.div>
@@ -154,7 +154,7 @@ export default function LeetCodeAchievements() {
                           onError={(e) => (e.target.src = '/fallback-badge.png')}
                         />
                       </div>
-                      <h4 className="mb-3 text-white font-bold text-sm text-center">{badge.name}</h4>
+                      <h4 className="mb-3 text-gray-900 dark:text-white font-bold text-sm text-center">{badge.name}</h4>
                     </div>
                   </motion.div>
                 ))}
